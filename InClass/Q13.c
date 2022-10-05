@@ -1,23 +1,30 @@
 #include<stdio.h>
+#include<stdint.h>
+#define SIZE 100
 
 int main(){
-    int arr[100],i,w,s,ba,*p,add;
-    printf("Enter size of Array:");
-    scanf("%d",&s);
-    // printf("\nEnter the memory size:");
-    // scanf("%d",w);
-    w=sizeof(int);
-    printf("Enter the index:");
-    scanf("%d",&i);
-    ba = arr;
-    printf("\n%d",ba);
-    add=ba+ (i)*w;
-    printf("\n%d",add);
-    if(add==&arr[i]){
-        printf("\nAddress is correct");
-    }
-    else{
-        printf("\nNO");
-    }
-    return 0;
+int size,m;
+int array[SIZE];
+unsigned int i, address, calAdd;
+int *ba ;
+printf("Enter the size of int array: ");
+scanf("%d",&size);
+m = sizeof(int);
+printf("Enter the index to find address: ");
+scanf("%d",&i);
+
+ba = array;
+address = (intptr_t) array;
+printf("The base address of array:%u ",ba);
+
+calAdd = address + i*m;
+printf("\nAddress of %d : %u",i,calAdd);
+printf("\nAddress of %d : %u",i,&array[i]);
+
+if (calAdd == (intptr_t) &array[i]){
+	printf("\nAddress is correct");
+}else{
+	printf("\nAddress isn't correct");
+}
+
 }
