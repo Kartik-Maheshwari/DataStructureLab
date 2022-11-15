@@ -1,6 +1,7 @@
 #include <stdio.h>
 int main()
 {
+    printf("Name: Kartik Maheshwari \tRoll No: 2100320120086  \t Branch and Section: CS-B\n");
     int a[60], n, i, j, k = 0, f = 0, l = 0, repeat[60], unique[60];
     printf("THE SIZE OF ARRAY:\n");
     scanf("%d", &n);
@@ -8,40 +9,29 @@ int main()
     for (i = 0; i < n; i++)
         scanf("%d", &a[i]);
 
-    for (i = 0; i < n; i++)
-    {
+    for (i = 0; i < n; i++){
         f = 0;
-        for (j = i + 1; j < n; j++)
-        {
-            if (a[i] == a[j])
-            {
+        for (j = i + 1; j < n; j++){
+            if (a[i] == a[j]){
                 a[j] = 0;
                 f = 1;
             }
         }
-        if (a[i] != 0)
-        {
-
-            if (f == 0)
-            {
+        if (a[i] != 0){
+            if (f == 0){
                 unique[l++] = a[i];
             }
-            else
-            {
+            else{
                 repeat[k++] = a[i];
             }
         }
     }
-
     printf("THE repeated elements OF ARRAY are\n");
-    for (i = 0; i < k; i++)
-    {
+    for (i = 0; i < k; i++){
         printf("%d\n", repeat[i]);
     }
-
     printf("THE non repeated elements OF ARRAY are\n");
-    for (i = 0; i < l; i++)
-    {
+    for (i = 0; i < l; i++){
         printf("%d\n", unique[i]);
     }
     return 0;

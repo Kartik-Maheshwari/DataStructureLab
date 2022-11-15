@@ -2,10 +2,11 @@
 #include"traverse.h"
 
 int main(){
+    printf("Name: Kartik Maheshwari \tRoll No: 2100320120086  \t Branch and Section: CS-B\n");
     int arr[10];
-    int s=10,count=10, flag=0,v;
+    int s=5,count=s, flag=0,v;
     input(arr,s);
-    printf("Enter the number you wnat to delete:");
+    printf("Enter the number you want to delete:");
     scanf("%d",&v);
     for(int i=0;i<s;i++){
         if(arr[i]==v){

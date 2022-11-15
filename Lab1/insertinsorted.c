@@ -16,10 +16,11 @@ int ins(int arr[],int count,int value){
     }
 }
 int main(){
+    printf("Name: Kartik Maheshwari \tRoll No: 2100320120086  \t Branch and Section: CS-B\n");
     int num[15]={10,20,30,40,50,60,70,80,90,100};
     ins(num,10,75);
-    printf("Number are:\n");
-    for(int i=0;i<15;i++){
+    printf("Numbers are:\n");
+    for(int i=0;i<11;i++){
         printf("%d ",num[i]);
     }
 }

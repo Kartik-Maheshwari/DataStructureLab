@@ -3,32 +3,8 @@
 #include"traverse.h"
 
 int main(){
+    printf("Name: Kartik Maheshwari \tRoll No: 2100320120086  \t Branch and Section: CS-B\n");
     int k=0,arr1[6]={5,6,7,8,10,11}, arr2[5]={1,3,5,15,21},arr3[11],i=0,j=0;
-    // while(l>0){
-    //     if(i<6 && j<5){
-    //         if(arr1[i]<arr2[j]){
-    //             arr3[k]=arr1[i];
-    //             k++;
-    //             i++;
-    //         }
-    //         else{
-    //             arr3[k]=arr2[j];
-    //             k++;
-    //             j++;
-    //         }
-    //     }
-    //     else if(i<6){
-    //         arr3[k]=arr1[i];
-    //             k++;
-    //             i++;
-    //     }
-    //     else{
-    //         arr3[k]=arr2[j];
-    //             k++;
-    //             j++;
-    //     }
-    // l--;
-    // }
     for(int n=0;n<11;n++){
         if(i<6 && j<5){
             if(arr1[i]<arr2[j]){
