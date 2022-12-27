@@ -2,7 +2,7 @@
 #include "linkedlist.h"
 
 int main(){
-    int s;
+    int ce=0,co=0;
     Node * st1 = initialize();
     insert_beg(&st1,50);
     insert_beg(&st1,40);
@@ -11,11 +11,16 @@ int main(){
     insert_beg(&st1,10);
     Node *curr = st1;
     while(curr !=NULL){
-        insert_last(&st2,curr->val);
+        if(curr->val %2 == 0){
+            ce++;
+        }
+        else{
+            co++;
+        }
         curr=curr->next;
     }
     show(st1);
-    printf("\nCopy of list\n");
-    show(st2);
+    printf("\nOdd number of nodes: %d ",co);
+    printf("\nEven number of nodes: %d ",ce);
     return 0;
 }

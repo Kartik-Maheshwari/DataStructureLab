@@ -20,7 +20,7 @@ int main(){
         curr=curr->next;
         i++;
     }
-    st2=curr;
+    st2=curr->next;
     curr->next=NULL;
     show(st1);
     printf("\nList 2:\n");
