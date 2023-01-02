@@ -1,0 +1,1 @@
+insert_last(&st1,50);
