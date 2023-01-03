@@ -1,0 +1,17 @@
+The circular linked list can be of two types:
+1-> Singly circular linked list     2-> Doubly circular linked list
+If the last node of the singly linked list contains the address of the first node then it is circular singly 
+linked list:
+
+        100            200          300           400
+      |10|200|  ->  |20|300|  ->  |30|400|  ->  |40|100|  
+        |                                           |
+        |-------------------------------------------|
+
+the address of last node is given with the help of this node we can move to first node
+Primitive operations:
+1->insert
+    Insert at begining , Insert at last, Insert at pos
+2->delete
+    Delete at begining , Delete at last, Delete at pos
+3->Traverse

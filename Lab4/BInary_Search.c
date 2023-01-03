@@ -31,6 +31,6 @@ void main(){
         printf("Found");
     }
     else{
-        printf("Not Found");z
+        printf("Not Found");
     };
 }
