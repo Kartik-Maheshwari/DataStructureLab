@@ -25,7 +25,7 @@ void pop(){
         printf("Stack is Empty.");
         return;
     }
-    printf("Popped element is: ",&stack[top--]);
+    printf("Popped element is: %d",&stack[top--]);
 }
 
 void peek(){

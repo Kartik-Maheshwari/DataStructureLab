@@ -1,0 +1,2 @@
+This list contain an extra node called node header node this node will carry some info related to link list
+for eg number of nodes, address of middle  node, add of last node etc..

@@ -1,0 +1,1 @@
+//Program to Delete kth node from end of a linked list in a single scan and O(n) time

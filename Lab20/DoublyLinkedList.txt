@@ -1,0 +1,11 @@
+This is also called two way linked list. In this list each Node contains three fields
+       prev            next
+    |       |       |       |
+               val
+Each node contains the address of their neighbours(both sides).The first Node's prev is NULL 
+whereas the last node's next has NULL.
+
+    | \o | 10 |   |   <--->   | | 20 | |   <--->  | | 30 | |    <--->  |   | 40 | \o |
+         start
+
+We can move forward and backward easily by add of next and prev. It takes more memory than linked list.
