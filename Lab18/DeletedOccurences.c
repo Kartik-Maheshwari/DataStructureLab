@@ -1,14 +1,20 @@
 /* Program for deletion of all the occurences of x from a linked list. */
 #include "linkedlist.h"
 
-int searchin(Node *start, int sval){
-    Node *current  = start;
-    while(current !=NULL){
+void delsearchedelement(Node **start, int sval){
+    int count=0;
+    while((*start) !=NULL && (*start)->val == sval){
+        (*start)=(*start)->next;
+    }
+    Node *prev= NULL;
+    Node *current  = (*start);
+    while(current!=NULL){
         if(current->val == sval)
-            return 1;
+            prev->next=current->next;
+        else
+            prev=current;
         current = current->next;
     }
-    return 0;
 }
 
 int main(){
@@ -27,14 +33,8 @@ int main(){
     int x;
     printf("\nEnter the value of the value you want to delete: ");
     scanf("%d",&x);
-    int count=0;
-    Node *curr = st1;
-    while(curr !=NULL){
-        if(searchin(st1,curr->val)){
-            count++;
-        }
-        curr=curr->next;
-    }
-    printf("\nThe count of x is: %d",count);
+    delsearchedelement(&st1,x);
+    printf("\nThe List without x is:" );
+    show(st1);
     return 0;
 }
