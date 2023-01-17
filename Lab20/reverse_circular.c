@@ -1,64 +1,42 @@
-#include<stdio.h>
-#include<stdlib.h>
+#include"cir_linked_primitive.h"
 
-typedef struct Node{
-    int val;
-    struct Node * next;
-}Node;
-
-Node * createNode(int val){
-    Node *temp =(Node *)malloc(sizeof(Node));
-    temp->val=val;
-    temp->next=NULL;
-    return temp;
-}
-
-void insert_beg(Node **last, int x)
+void reverse(Node** last)
 {
-    Node *newNode = createNode(x);
-    if(*last==NULL){
-        (*last)=newNode;
-        newNode->next=newNode;
-    }
-    else{
-        newNode->next=(*last)->next;
-        (*last)->next=newNode;
-    }
-}
-
-void show(Node *last){
-    if(last ==NULL){
-        printf("List is Empty");
+    // if list is empty
+    if (*last == NULL)
         return;
-    }
-    Node *curr = last->next;
-    printf("Circular linked list is:\n");
-    do{
-        printf("%d  |  %p  ",curr->val,curr->next);
-        curr=curr->next;
-    }while(curr!= last->next);
-    printf("\n");
-}
-
-void reverse(Node **last){
-    Node * curr =(*last)->next;
-    Node *prev =*last, *next=NULL;
-    (*last)->next = 
+ 
+    // reverse procedure same as reversing a
+    // singly linked list
+    Node* prev = NULL;
+    Node* current = (*last)->next;
+    Node* next;
+    do {
+        next = current->next;
+        current->next = prev;
+        prev = current;
+        current = next;
+    } while (current->next!=NULL);
+ 
+    // adjusting the links so as to make the
+    // last node point to the first node
+    // (*last)->next = prev;
+    // *last = prev;
+    current->next=(*last);
+    (*last)=next;
 }
 
 int main(){
     Node * last1=NULL;
-    Node * last2=NULL;
-    // Node *last;
     insert_beg(&last1,5);
     insert_beg(&last1,10);
     insert_beg(&last1,20);
-    insert_beg(&last2,25);
-    insert_beg(&last2,15);
-    insert_beg(&last2,25);
+    insert_beg(&last1,16);
+    insert_beg(&last1,12);
+    insert_beg(&last1,122);
     show(last1);
-    show(last2);
-    Node *last = concat(last1,last2);
-    show(last);
+    reverse(&last1);
+    printf("\nThe Reversed ");
+    show(last1);
 
 }
