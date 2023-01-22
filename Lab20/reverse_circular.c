@@ -2,12 +2,8 @@
 
 void reverse(Node** last)
 {
-    // if list is empty
     if (*last == NULL)
         return;
- 
-    // reverse procedure same as reversing a
-    // singly linked list
     Node* prev = NULL;
     Node* current = (*last)->next;
     Node* next;
@@ -17,11 +13,6 @@ void reverse(Node** last)
         prev = current;
         current = next;
     } while (current->next!=NULL);
- 
-    // adjusting the links so as to make the
-    // last node point to the first node
-    // (*last)->next = prev;
-    // *last = prev;
     current->next=(*last);
     (*last)=next;
 }
