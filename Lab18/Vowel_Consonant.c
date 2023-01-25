@@ -28,10 +28,16 @@ void arrange_list(Node **start){
         while(curr!=NULL && !isvowel(curr->val)){
             curr=curr->next;
         }
-        (*start)->next=curr->next;
-        curr->next=(*start);
-        (*start)=curr;
-        vow=(*start);
+        if(curr == NULL){
+            return;
+        }
+        vow=curr;
+        curr=curr->next;
+        vow->next=(*start);
+        // (*start)->next=curr->next;
+        // curr->next=(*start);
+        // (*start)=curr;
+        // vow=(*start);
     }
     Node * frwd = (*start)->next;
     while(frwd!=NULL){
@@ -51,9 +57,9 @@ int main(){
     Node * st1 = initialize();
     insert_last(&st1,'K');
     insert_last(&st1,'a');
-    insert_last(&st1,'R');
+    insert_last(&st1,'r');
     insert_last(&st1,'t');
-    insert_last(&st1,'I');
+    insert_last(&st1,'i');
     insert_last(&st1,'k');
     show_char(st1);
     arrange_list(&st1);

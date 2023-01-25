@@ -1,10 +1,19 @@
 #include <stdio.h>
+#include<stdlib.h>
 
 void printArray(int *A, int n){
     for (int i = 0; i < n; i++){
         printf("%d ", A[i]);
     }
     printf("\n");
+}
+
+void swap(int *a, int *b)
+{
+    int temp;
+    temp = *a;
+    *a = *b;
+    *b = temp;
 }
 
 int partition(int A[], int low, int high){
@@ -40,6 +49,8 @@ void quickSort(int A[], int low, int high){
     int partitionIndex; // Index of pivot after partition
 
     if (low < high){
+        int r = low + rand()%(high - low +1);
+        swap(&A[low],&A[r]);
         partitionIndex = partition(A, low, high); 
         quickSort(A, low, partitionIndex - 1);  // sort left subarray 
         quickSort(A, partitionIndex + 1, high); // sort right subarray

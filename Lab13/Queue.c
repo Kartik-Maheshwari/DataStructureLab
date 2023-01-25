@@ -15,7 +15,7 @@ void init(){
 void Enqueue(){
     int item;
     if (Lqueue.rear==size-1){
-        printf("Queue Is Full");
+        printf("\nQueue Is Full");
         return;
     }
     printf("Enter the Element You want to insert: ");
@@ -25,7 +25,7 @@ void Enqueue(){
         Lqueue.front++;
     }
     Lqueue.data[Lqueue.rear]=item;
-    printf("Item Inserted.");
+    printf("\nItem Inserted.");
     printf("\nFront = %d , Rear = %d ",Lqueue.front,Lqueue.rear);
 }
 
