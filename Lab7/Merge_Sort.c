@@ -1,9 +1,7 @@
-#include <stdlib.h>
+// Merge Sort
 #include <stdio.h>
-// Merge Function
 
-void merge(int arr[], int l, int m, int r)
-{
+void merge(int arr[], int l, int m, int r){
     int i, j, k;
     int n1 = m - l + 1;
     int n2 = r - m;
@@ -15,38 +13,31 @@ void merge(int arr[], int l, int m, int r)
     i = 0;
     j = 0;
     k = l;
-    while (i < n1 && j < n2)
-    {
-        if (L[i] <= R[j])
-        {
+    while (i < n1 && j < n2){
+        if (L[i] <= R[j]){
             arr[k] = L[i];
             i++;
         }
-        else
-        {
+        else{
             arr[k] = R[j];
             j++;
         }
         k++;
     }
-    while (i < n1)
-    {
+    while (i < n1){
         arr[k] = L[i];
         i++;
         k++;
     }
-    while (j < n2)
-    {
+    while (j < n2){
         arr[k] = R[j];
         j++;
         k++;
     }
 }
 
-void mergeSort(int arr[], int l, int r)
-{
-    if (l < r)
-    {
+void mergeSort(int arr[], int l, int r){
+    if (l < r){
         int m = l + (r - l) / 2;
         mergeSort(arr, l, m);
         mergeSort(arr, m + 1, r);
@@ -54,16 +45,15 @@ void mergeSort(int arr[], int l, int r)
     }
 }
 
-void printArray(int A[], int size)
-{
+void printArray(int A[], int size){
     int i;
     for (i = 0; i < size; i++)
         printf("%d ", A[i]);
     printf("\n");
 }
 
-int main()
-{
+int main(){
+    printf("Name: Kartik Maheshwari \tRoll No: 2100320120086  \t Branch and Section: CS-B\n");
     int arr[] = {85, 24, 63, 45, 17};
     int arr_size = sizeof(arr) / sizeof(arr[0]);
     printf("\nGiven array is \n");

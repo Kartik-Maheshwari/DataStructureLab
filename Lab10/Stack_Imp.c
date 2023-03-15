@@ -2,7 +2,6 @@
 #define size 10
 int top, stack[size];
 
-
 void initialize(){
     top=-1;
 }
@@ -18,6 +17,7 @@ void push(){
     }
     printf("Enter any Number: ");
     scanf("%d",&stack[++top]);
+    printf("Element is pushed into the stack.\n");
 }
 
 void pop(){
@@ -25,7 +25,7 @@ void pop(){
         printf("Stack is Empty.");
         return;
     }
-    printf("Popped element is: %d",&stack[top--]);
+    printf("Popped element is: %d",stack[top--]);
 }
 
 void peek(){
@@ -41,16 +41,17 @@ void show(){
         printf("Stack is Empty.");
         return;
     }
-    for (int i=top;i>0;i--){
+    for (int i=top;i>=0;i--){
         printf("%d\n",stack[i]);
     }
 }
 
 int main(){
     int c;
+    printf("Name: Kartik Maheshwari \tRoll No: 2100320120086  \t Branch and Section: CS-B\n");
     initialize();
     do{
-        printf("1....Push.\n");
+        printf("\n1....Push.\n");
         printf("2....Pop.\n");
         printf("3....Show.\n");
         printf("4....Peek.\n");

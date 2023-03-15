@@ -11,6 +11,7 @@ int search(int arr[],int s,int k){
 }
 
 int main(){
+    printf("Name: Kartik Maheshwari \tRoll No: 2100320120086  \t Branch and Section: CS-B\n");
     int arrr[]={1,2,3,4,5,6,7,4,4,4};
     int count=search(arrr,10,4);
     if(count){

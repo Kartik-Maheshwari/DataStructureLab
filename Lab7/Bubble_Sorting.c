@@ -3,6 +3,7 @@
 void main(){
     int arr[10],n;
     int i,j,temp;
+    printf("Name: Kartik Maheshwari \tRoll No: 2100320120086  \t Branch and Section: CS-B\n");
     printf("Enter the number of elements:");
     scanf("%d",&n);
     for(i=0;i<n;i++){

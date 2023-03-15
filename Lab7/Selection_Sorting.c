@@ -3,6 +3,7 @@
 void main(){
     int arr[100],n;
     int i,p,t,s,j;
+    printf("Name: Kartik Maheshwari \tRoll No: 2100320120086  \t Branch and Section: CS-B\n");
     printf("Enter the number of earrements:");
     scanf("%d",&n);
     for(i=0;i<n;i++){

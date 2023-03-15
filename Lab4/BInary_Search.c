@@ -25,6 +25,7 @@ int BSearch(int arr[],int s, int n){
 
 
 void main(){
+    printf("Name: Kartik Maheshwari \tRoll No: 2100320120086  \t Branch and Section: CS-B\n");
     int l[6]={1,5,6,9,15,25};
     int n,mid,L=0,U=6;
     if(BSearch(l,6,15)){
